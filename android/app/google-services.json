@@ -1,30 +1,26 @@
 {
   "project_info": {
-    "project_number": "000000000000",
+    "project_number": "224292999111",
     "project_id": "life-style-8d93a",
-    "storage_bucket": "life-style-8d93a.appspot.com",
-    "firebase_url": "https://life-style-8d93a-default-rtdb.firebaseio.com"
+    "storage_bucket": "life-style-8d93a.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:000000000000:android:0000000000000000",
+        "mobilesdk_app_id": "1:224292999111:android:3cf213c340f7b422de53e2",
         "android_client_info": {
-          "package_name": "Com.lifestyle.social"
+          "package_name": "com.lifestyle.social"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "REPLACE_WITH_YOUR_ANDROID_API_KEY"
+          "current_key": "AIzaSyCfwLzAHMtn1WSo-mCod0ToURwWxhhvKRc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": []
-        },
-        "analytics_service": {
-          "status": "NOT_AVAILABLE"
         }
       }
     }

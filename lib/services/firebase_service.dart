@@ -1,11 +1,20 @@
-import 'package:flutter/material.dart';
-import 'package:lifestyle_social_app/app_theme.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class FirebaseService {
+  static const String projectId = 'life-style-8d93a';
+  static const String packageName = 'com.lifestyle.social';
+
+  static FirebaseAuth get auth => FirebaseAuth.instance;
+  static FirebaseFirestore get firestore => FirebaseFirestore.instance;
+
   static Future<void> initialize() async {
-    await Future.delayed(const Duration(milliseconds: 500));
+    // Firebase is initialized in main.dart
   }
 
-  static const String projectId = 'life-style-8d93a';
-  static const String packageName = 'Com.lifestyle.social';
+  static Stream<User?> get authStateChanges => auth.authStateChanges();
+
+  static Future<void> signOut() async {
+    await auth.signOut();
+  }
 }

@@ -1,4 +1,4 @@
-package Com.lifestyle.social
+package com.lifestyle.social
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lifestyle_social_app/app_theme.dart';
+import 'package:lifestyle_social_app/services/auth_service.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -29,7 +30,14 @@ class SettingsScreen extends StatelessWidget {
             _SettingSection(title: 'Support', items: [
               _SettingItem(label: 'Help center', icon: Icons.help_outline),
               _SettingItem(label: 'Terms & Privacy', icon: Icons.description_outlined),
-              _SettingItem(label: 'Log out', icon: Icons.logout_rounded, danger: true),
+              _SettingItem(
+                label: 'Log out',
+                icon: Icons.logout_rounded,
+                danger: true,
+                onTap: () async {
+                  await AuthService.signOut();
+                },
+              ),
             ]),
           ],
         ),
@@ -66,11 +74,17 @@ class _SettingSection extends StatelessWidget {
 }
 
 class _SettingItem extends StatelessWidget {
-  const _SettingItem({required this.label, required this.icon, this.danger = false});
+  const _SettingItem({
+    required this.label,
+    required this.icon,
+    this.danger = false,
+    this.onTap,
+  });
 
   final String label;
   final IconData icon;
   final bool danger;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +98,7 @@ class _SettingItem extends StatelessWidget {
         ),
       ),
       trailing: const Icon(Icons.arrow_forward_ios, size: 15, color: AppTheme.softText),
-      onTap: () {},
+      onTap: onTap ?? () {},
     );
   }
 }

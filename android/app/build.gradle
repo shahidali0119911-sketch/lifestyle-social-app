@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "Com.lifestyle.social"
+    namespace = "com.lifestyle.social"
     compileSdk = flutter.compileSdkVersion
 
     ndkVersion = flutter.ndkVersion
@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "Com.lifestyle.social"
+        applicationId = "com.lifestyle.social"
         minSdk = 23
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
