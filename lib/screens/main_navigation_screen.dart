@@ -4,6 +4,7 @@ import 'package:lifestyle_social_app/screens/home_screen.dart';
 import 'package:lifestyle_social_app/screens/messages_screen.dart';
 import 'package:lifestyle_social_app/screens/notifications_screen.dart';
 import 'package:lifestyle_social_app/screens/profile_screen.dart';
+import 'package:lifestyle_social_app/screens/reels_screen.dart';
 import 'package:lifestyle_social_app/screens/search_screen.dart';
 import 'package:lifestyle_social_app/screens/settings_screen.dart';
 
